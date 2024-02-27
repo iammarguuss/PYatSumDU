@@ -5,14 +5,14 @@ class TextAnalyzer:
         self.text = text 
     
     def count_all_chars(self):
-        return len(self.text) #counts all chars
+        return len(self.text)
     
     def count_spaces(self):
-        return self.text.count(' ') #counts all spaces
+        return self.text.count(' ')
     
     def count_uppercase_letters(self):
-        return sum(1 for char in self.text if char.isupper()) # counts uppercase chars
-
+        return sum(1 for char in self.text if char.isupper())
+        
     def count_lowercase_letters(self):
         """Counts lowercase characters."""
         return sum(1 for char in self.text if char.islower())
@@ -29,4 +29,4 @@ print("Total characters:", analyzer.count_all_chars())
 print("Total spaces:", analyzer.count_spaces())
 print("Total uppercase letters:", analyzer.count_uppercase_letters())
 print("Total lowercase letters:", analyzer.count_lowercase_letters())
-print("Total periods:", analyzer.count_periods())
+print("Total points:", analyzer.count_periods())
