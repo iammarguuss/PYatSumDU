@@ -5,7 +5,7 @@ output_file_path = 'cooked.csv'
 
 try:
     with open(input_file_path, mode='r', encoding='utf-8') as file:
-        print(file.read()) #not sure that was that a good idea
+        print(file.read()) #not sure that was a good idea
 
         reader = csv.reader(file)
         headers = next(reader) 
