@@ -1,0 +1,1 @@
+By Mark Shaposhnik: Why do we study Python, if we have JS on v8?
