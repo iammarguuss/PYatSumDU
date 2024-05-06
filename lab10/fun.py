@@ -25,8 +25,12 @@ class StudentWork:
             file.write(user_input + '\n')
         print("I am done here))")
 
-    def student2(self):
-        print("student2 is here))")
+    def student2(self): # by Kim Yelyzaveta
+        user_input = input("Введіть текст для доконання в файл chat.txt: ")
+        with open('chat.txt', 'a') as file:  # Використовуємо режим додавання 'a'
+            file.write(user_input + '\n')
+        print("Додатковий текст успішно записан в файл.")
+
 
     def student3(self):
         print("student3 is here))")
