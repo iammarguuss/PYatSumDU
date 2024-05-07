@@ -1,7 +1,8 @@
 class StudentWork:
     def __init__(self):
         try:
-            match int(input("Введите номер студента (1-5): ")):
+            number = int(input("Введіть номер студента (1-5): "))
+            match number:
                 case 1:
                     self.student1()
                 case 2:
@@ -33,7 +34,9 @@ class StudentWork:
 
 
     def student3(self):
-        print("student3 is here))")
+        predefined_text = "\nBeacause Python it's my life :)"
+        with open('chat.txt', 'a') as file:
+            file.write(predefined_text + '\n')
 
     def student4(self):
         print("student4 is here))")
