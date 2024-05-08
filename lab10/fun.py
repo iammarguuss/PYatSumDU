@@ -38,8 +38,26 @@ class StudentWork:
         with open('chat.txt', 'a') as file:
             file.write(predefined_text + '\n')
 
-    def student4(self):
-        print("student4 is here))")
+    def student4(self): # By Kovalenko Vadim
+        print("Метод студента 4 выполнен.")
+        try:
+            # Операція зчитування даних із файла
+            with open('chat.txt', 'r') as file:
+                content = file.read()
+                print("Зміст файлу:")
+                print(content)
+            
+            # Запрос на дод.текст
+            additional_text = input("Введіть додат. текст: ")
+            
+            # Операція запису тексту в файл
+            with open('chat.txt', 'w') as file:
+                file.write(content + additional_text + '\n')
+            print("ТЕкст додано у файл.")
+        except FileNotFoundError:
+            print("Файл не знайдено, перевірте наявність файла")
+        except Exception as e:
+            print(f"Виникла помилка: {e}")
 
     def student5(self):
         print("student5 is here))")
