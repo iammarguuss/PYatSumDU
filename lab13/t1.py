@@ -66,10 +66,25 @@ class AirportDataGenerator: # class declaration
         except Exception as e: #I think you get it
             print(f"An error occurred while writing to the file: {e}") # error print
             #And yes, some of your student know english well enough, you know...
-
-    def student2(self):
-        # No code yet
-        pass
+# next part of code by Kovalenko Vadim
+    def student2(self): # Thanos dream
+        json_filename = 'random.json'
+        csv_filename = 'random.csv'
+        try: #simple try
+            with open(json_filename, 'r', encoding='utf-8') as file: #Thanos need to find the stones
+                data = json.load(file) # incrustasion of the stones
+            filtered_data = [entry for entry in data if entry['Country'] != 'RU']# launght of an eternal stones
+            with open(csv_filename, 'w', newline='', encoding='utf-8') as file: # Thanos anigilating work
+                writer = csv.DictWriter(file, fieldnames=["Airport", "State", "Index", "Country"]) # anigilating
+                writer.writeheader() # Memerial table
+                writer.writerows(filtered_data) # list of survivors
+            print(f"Filtered data is actually in file {csv_filename}.") # Thanos work is now complete
+        except FileNotFoundError:
+            print(f"File {json_filename} doesnt found.") # Thor hits the neck
+        except json.JSONDecodeError:
+            print("Error of JSON decoding.") # Tony Stark stole his stones
+        except Exception as e:
+            print(f"Eror: {e}") # Stones doesn`t work
 
     def student3(self):
         # No code yet
