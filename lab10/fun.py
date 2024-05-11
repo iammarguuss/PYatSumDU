@@ -33,7 +33,7 @@ class StudentWork:
         print("Додатковий текст успішно записан в файл.")
 
 
-    def student3(self):
+    def student3(self): # By Diachenko Vitalii
         predefined_text = "\nBeacause Python it's my life :)"
         with open('chat.txt', 'a') as file:
             file.write(predefined_text + '\n')
