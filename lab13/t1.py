@@ -86,9 +86,24 @@ class AirportDataGenerator: # class declaration
         except Exception as e:
             print(f"Eror: {e}") # Stones doesn`t work
 
-    def student3(self):
-        # No code yet
-        pass
+    def student3(self): #by Diachenko Vitalii
+        csv_filename = 'random.csv'
+        json_filename = 'random.json'
+        try:
+            with open(csv_filename, mode='r', encoding='utf-8') as file:
+                reader = csv.DictReader(file)
+                data = list(reader)
+            # Сортування данних по полю index
+            sorted_data = sorted(data, key=lambda x: x['Index'])
+            with open(json_filename, 'w', encoding='utf-8') as file:
+                json.dump(sorted_data, file, indent=4)
+            print(f"Відсортовані данні записані в файл {json_filename}.")
+        except FileNotFoundError:
+            print(f"Файл {csv_filename} не знайдено.")
+        except json.JSONDecodeError:
+            print("Помилка декодування JSON.")
+        except Exception as e:
+            print(f"Виникла помилка: {e}")
 
     def student4(self):
         # No code yet
