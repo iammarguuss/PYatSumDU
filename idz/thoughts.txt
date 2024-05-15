@@ -1,0 +1,8 @@
+15.05.24
+So, this is not as easy as expected. 
+So how about v1/serverg.py. I need to run it on the server to test it via vpn to find unperfect conditions... That is the goal of this solutions.
+For it v1/testg.py should be fine, so far. 
+
+but no, its just all fucked up
+
+16.05.24
